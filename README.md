@@ -1,19 +1,42 @@
-# Awesome CV [![Example](https://img.shields.io/badge/example-pdf-green.svg)](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/resume.pdf)
+# CV [![Example](https://img.shields.io/badge/example-pdf-green.svg)](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/resume.pdf)
 
-
+<!--
 ## Quick Start
 
 1. [**OverLeaf.com**](https://www.overleaf.com/latex/templates/awesome-cv/tvmzpvdjfqxp)(formerly **WriteLaTeX.com**)
 
 **_Note:_ Above services do not guarantee up-to-date source code of Awesome CV**
+-->
 
-## How to Use
-### Requirements
+## Requirements:
+- [Latexmk](https://mg.readthedocs.io/latexmk.html)  
+You probably have it already installed on your computer, because it is part of MacTeX and MikTeX and is bundled with many Linux Distributions.
+For macOS with brew I suggest 
+```
+brew install --cask mactex
+```
+- [Python 3](https://www.python.org/downloads/)  
+Required to run build.py script
 
-A full TeX distribution is assumed.  [Various distributions for different operating systems (Windows, Mac, \*nix) are available](http://tex.stackexchange.com/q/55437) but TeX Live is recommended.
-You can [install TeX from upstream](http://tex.stackexchange.com/q/1092) (recommended; most up-to-date) or use `sudo apt-get install texlive-full` if you really want that.  (It's generally a few years behind.)
+## Compilation
+```zsh
+latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -outdir=output/pdf "resume.tex"
+```
 
-### Usage
+## Editor
+As an editor I strongly suggest Visual Studio Code.  
+List of required extensions are in `.vscode/extensions.json`.
+
+
+## Spell checker
+I used `aspell` for spell checks in terminal.
+```zsh
+# install aspell
+brew install aspell 
+
+# run spellcheck script
+./spellcheck.py
+```
 
 ## Credit
 ### LaTeX
