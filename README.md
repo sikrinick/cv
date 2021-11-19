@@ -2,11 +2,6 @@
 
 This is my CV and an extremelly small LaTeX class for my CV requirements.  
 Please, don't hesitate to use it for your needs.
-<object data="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
 
 ## Requirements:
 - [Latexmk](https://mg.readthedocs.io/latexmk.html)  
