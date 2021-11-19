@@ -1,72 +1,18 @@
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[10pt]{ms-cv}
 
-%%% Override a directory location for fonts(default: 'fonts/')
-\fontdir[fonts/]
-
-%%% Configure a directory location for sections
-\newcommand*{\sectiondir}{resume/}
-
-%%% Override color
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
-%% Color for highlight
-% Define your custom color if you don't like awesome colors
-\colorlet{awesome}{black}
-%\definecolor{awesome}{HTML}{CA63A8}
-%% Colors for text
-%\definecolor{darktext}{HTML}{414141}
-%\definecolor{text}{HTML}{414141}
-%\definecolor{graytext}{HTML}{414141}
-%\definecolor{lighttext}{HTML}{414141}
-
-%%% Override a separator for social informations in header(default: ' | ')
-%\headersocialsep[\quad\textbar\quad]
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     3rd party packages
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Needed to divide into several files
-\usepackage{import}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Personal Data
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Essentials
-\name{Mykyta}{Sikriier}
+\name{Mykyta Sikriier}
+\position{Software Developer}
 \mobile{570-304-834} 
-%%% Social
 \email{sikrinick@gmail.com}
 \github{sikrinick}
 \linkedin{sikrinick}
-%%% Optionals
-\position{Software Engineer}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Content
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
-\makecvfooter
-  {\today}
-  {}
-  {Mykyta Sikriier~~~·~~~CV}
 
 \begin{document}
-%%% Make a header for CV with personal data
+
 \makecvheader
 
-%%% Import contents
-\vspace{10mm} %temp!
-\import{\sectiondir}{skills.tex}
-\vspace{10mm} %temp!
-\import{\sectiondir}{experience.tex}
-\vspace{10mm} %temp!
-\import{\sectiondir}{education.tex}
-%\import{\sectiondir}{extracurricular.tex}
-%\import{\sectiondir}{honors.tex}
-%\import{\sectiondir}{presentation.tex}
-%\import{\sectiondir}{writing.tex}
-%\import{\sectiondir}{committees.tex}
+\input{resume/skills.tex}
+\input{resume/experience.tex}
+\input{resume/education.tex}
 
 \end{document}
