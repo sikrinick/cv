@@ -3,15 +3,26 @@
 This is my CV and an extremelly small LaTeX class for my CV requirements.  
 Please, don't hesitate to use it for your needs.
 
+[![CV](https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/resume.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume.pdf)
+
+## Quick Start
+- [**Check CV on OverLeaf.com**](https://www.overleaf.com/read/sthfkhvrccpx)
+
 ## Requirements:
 - [Latexmk](https://mg.readthedocs.io/latexmk.html)  
-You probably have it already installed on your computer, because it is part of MacTeX and MikTeX and is bundled with many Linux Distributions.
+If you use LaTeX you probably have it already installed on your computer, because it is part of MacTeX and MikTeX and is bundled with many Linux Distributions.  
 For macOS with brew I suggest 
 ```
 brew install --cask mactex
 ```
+- [Python 3](https://www.python.org/downloads/)  
+Required to run `build.py` script
 
 ## Compilation
+```zsh
+./build.py
+```
+or
 ```zsh
 latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -outdir=output/pdf "resume.tex"
 ```
