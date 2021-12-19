@@ -3,8 +3,16 @@
 This is my CV and an extremelly small LaTeX class for my CV requirements.  
 Please, don't hesitate to use it for your needs.
 
-[![CV](https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/cv/cv.pdf)
+## More precise CV
 
+<p float="left">
+<img
+ src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.svg" href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/cv/cv.pdf" title="cv" width="50%">
+<img
+ src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.2.svg" href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/cv/cv.pdf" title="cv_2" width="50%">
+</p>
+
+## Smaller Resume
 [![Resume](https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/resume.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume/resume.pdf)
 
 ## Quick Start
