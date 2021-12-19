@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from os import listdir, chdir, system
-from subprocess import check_output, Popen, PIPE
+from subprocess import Popen, PIPE
 from os.path import isdir, join, dirname, realpath
 from dataclasses import dataclass
 from typing import List
@@ -27,6 +27,7 @@ chdir(dirname(realpath(__file__)))
 
 tex_files = list_tex_files("resume")
 tex_files.append("resume.tex")
+tex_files.append("cv.tex")
 
 
 aspell_dicts = [

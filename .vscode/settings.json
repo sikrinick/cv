@@ -12,7 +12,7 @@
             ]
         }
     ],
-    "latex-workshop.latex.outDir": "%DIR%/output/pdf",
+    "latex-workshop.latex.outDir": "%DIR%/output/pdf/%DOCFILE%",
     "languageTool.language":"en",
     "commentTranslate.targetLanguage": "en"
 }

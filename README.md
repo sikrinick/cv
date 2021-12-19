@@ -3,7 +3,9 @@
 This is my CV and an extremelly small LaTeX class for my CV requirements.  
 Please, don't hesitate to use it for your needs.
 
-[![CV](https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/resume.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume.pdf)
+[![CV](https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/cv/cv.pdf)
+
+[![Resume](https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/resume.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume/resume.pdf)
 
 ## Quick Start
 - [**Check CV on OverLeaf.com**](https://www.overleaf.com/read/sthfkhvrccpx)
@@ -24,7 +26,8 @@ Required to run `build.py` script
 ```
 or
 ```zsh
-latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -outdir=output/pdf "resume.tex"
+latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error "cv.tex"
+latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error "resume.tex"
 ```
 
 ## Editor
