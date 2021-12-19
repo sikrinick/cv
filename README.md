@@ -3,17 +3,30 @@
 This is my CV and an extremelly small LaTeX class for my CV requirements.  
 Please, don't hesitate to use it for your needs.
 
-## More precise CV
-
-<p float="left">
-<img
- src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.svg" href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/cv/cv.pdf" title="cv" width="50%">
-<img
- src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.2.svg" href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/cv/cv.pdf" title="cv_2" width="50%">
-</p>
-
-## Smaller Resume
+## Resume
 [![Resume](https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/resume.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume/resume.pdf)
+
+## More precise Curriculim Vitae
+<table>
+<tr>
+<td valign="top">
+
+<a href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/cv/cv.pdf">
+
+<img
+src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.svg" title="cv" 
+/>
+</a>
+</td>
+
+<td valign="top">
+<a href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/cv/cv.pdf">
+<img
+ src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.2.svg" title="cv_2"
+ />
+</a>
+</td>
+</table>
 
 ## Quick Start
 - [**Check CV on OverLeaf.com**](https://www.overleaf.com/read/sthfkhvrccpx)
