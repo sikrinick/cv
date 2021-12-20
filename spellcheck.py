@@ -28,6 +28,7 @@ chdir(dirname(realpath(__file__)))
 tex_files = list_tex_files("resume")
 tex_files.append("resume.tex")
 tex_files.append("cv.tex")
+tex_files.append("README.md")
 
 
 aspell_dicts = [
