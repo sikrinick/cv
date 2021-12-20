@@ -48,6 +48,9 @@
 \setlength{\parindent}{0pt}
 % No page numbers
 \pagenumbering{gobble}
+% Page color
+\definecolor{backgroundcolor}{HTML}{FDF6E3}
+\pagecolor{backgroundcolor}
 
 %% Styles
 % For elements of skill
