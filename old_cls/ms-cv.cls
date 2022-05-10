@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ms-cv}[2022/05/07 v2.0.1 MS CV]
+\ProvidesClass{ms-cv}[2021/11/15 v1.0.1 MS CV]
 
 
 \providecommand{\isresume}{}
@@ -37,8 +37,6 @@
 \RequirePackage{forloop}
 % Colors
 \RequirePackage{xcolor}
-% ifelsethen
-\RequirePackage{xifthen}
 % Needed to deal hyperlink
 \RequirePackage[hidelinks]{hyperref}
 
@@ -71,46 +69,70 @@
     \@ifundefined{c@#1}{\newcounter{#1}}{}
 }
 
-% \cvsection[<section-end>]{<section-title>}
-\newcommand{\cvsection}[2][]{
-    {\large\MakeUppercase{#2}}
-    \hspace{1mm}
-    \hrulefill
-    \ifthenelse{\isempty{#1}}
-        {}
-        {
-            \hspace{1mm}
-            {\large#1}
-        }
-    
+% \cvsection{<section-title>}
+\newenvironment{cvsection}[1][]
+{
+    \providecounter{cvsectioncounter}
+    \setcounter{cvsectioncounter}{0}
+    \providecommand{\cvsectionname}{}
+    \renewcommand{\cvsectionname}{#1}
 }
-
-% \cvexperience{company}{position}{place}{dates}{resume_description}{cv_description}
-\newcommand{\cvexperience}[6]{
-    \begin{flushleft}
-    \begin{tabularx}{\textwidth}{X r}
-        {\large#2} & {\large#3} \\
-        {\large#1} & #4 \\
-        \ifthenelse{\equal{\isresume}{true}}{
-            #5 & \\
-        }{
-            #6 & \\
-        }    
+{
+  \providecounter{idx}
+  \begin{flushleft}
+  \begin{tabularx}{\textwidth}{p{7em} X}
+        \if \value{cvsectioncounter} 0
+            {\large\MakeUppercase{\cvsectionname}} & \\
+        \else 
+            {\large\MakeUppercase{\cvsectionname}}
+            \forloop{idx}{0}{\value{idx}<\value{cvsectioncounter}}{
+                & \@nameuse{cvitemtitlerow\theidx} \\
+                & \@nameuse{cvitemcontentrow\theidx} \\        
+            }
+        \fi
     \end{tabularx}
     \end{flushleft}
 }
 
+% \cvsection{titlerow}{subtitlerow}
+\newcommand{\cvitem}[2]{
+    \@namedef{cvitemtitlerow\arabic{cvsectioncounter}}{
+        #1
+    }
+    \@namedef{cvitemcontentrow\arabic{cvsectioncounter}}{
+        #2
+    }
+    \stepcounter{cvsectioncounter}
+}
+
+% \cvexperience{company}{position}{place}{dates}{resume_description}{cv_description}
+\newcommand{\cvexperience}[6]{
+    \cvitem{
+        \Large#1 \hfill \large#3 
+        \newline 
+        #2 \hfill #4\unskip
+    }{
+        \ifthenelse{\equal{\isresume}{true}}{
+            #5
+         }{
+            #6
+         }
+                
+        \vspace{4mm}
+    }
+}
+
 
 \newenvironment{cvskills}{
-    \providecounter{cvskillcounter}
-    \setcounter{cvskillcounter}{0}    
+    \providecounter{cvsectioncounter}
+    \setcounter{cvsectioncounter}{0}    
 }{
     \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
     \providecounter{idx}
     \begin{tabularx}{\textwidth}{r X}
-        \forloop{idx}{0}{\value{idx}<\value{cvskillcounter}}{
+        \forloop{idx}{0}{\value{idx}<\value{cvsectioncounter}}{
             \bfseries{\@nameuse{cvskillname\theidx}} & \large\@nameuse{cvskilllist\theidx} \\
         }
     \end{tabularx}
@@ -119,17 +141,15 @@
 
 % \cvskill{type}{skillset}
 \newcommand*{\cvskill}[2]{
-    \@namedef{cvskillname\arabic{cvskillcounter}}{#1}
-    \@namedef{cvskilllist\arabic{cvskillcounter}}{#2}
-    \stepcounter{cvskillcounter}
+    \@namedef{cvskillname\arabic{cvsectioncounter}}{#1}
+    \@namedef{cvskilllist\arabic{cvsectioncounter}}{#2}
+    \stepcounter{cvsectioncounter}
 }
 
 % CV header with contact info
 \newcommand{\makecvheader}{
   
     {\fontsize{40}{48}\selectfont \@name}
-    \hfill
-    As for \today
     
     \vspace{3mm}
     \ifthenelse{\isundefined{\@position}}{}{

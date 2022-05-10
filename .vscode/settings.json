@@ -7,6 +7,7 @@
                 "-xelatex",
                 "-synctex=1",
                 "-file-line-error",
+                "-halt-on-error",
                 "-outdir=%OUTDIR%",
                 "%DOC%"
             ]
