@@ -3,10 +3,8 @@
 This is my CV and an extremely small LaTeX class for my CV requirements.  
 Please, don't hesitate to use it for your needs.
 
-## Resume
-[![Resume](https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/resume.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume/resume.pdf)
 
-## More precise Curriculum Vitae
+## CV
 <table>
 <tr>
 <td valign="top">
@@ -27,6 +25,9 @@ src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.svg" ti
 </a>
 </td>
 </table>
+
+## Resume
+[![Resume](https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/resume.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume/resume.pdf)
 
 ## Quick Start
 - [**Check CV on OverLeaf.com**](https://www.overleaf.com/read/sthfkhvrccpx)

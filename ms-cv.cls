@@ -129,7 +129,7 @@
   
     {\fontsize{40}{48}\selectfont \@name}
     \hfill
-    As for \today
+    As of \today
     
     \vspace{3mm}
     \ifthenelse{\isundefined{\@position}}{}{
