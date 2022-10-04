@@ -1,6 +1,6 @@
 # CV [![Example](https://img.shields.io/badge/example-pdf-green.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume.pdf)
 
-This is my CV and an extremely small LaTeX class for my CV requirements.  
+This is my CV and a LaTeX class, which can be used for CV and Resume production.  
 Please, don't hesitate to use it for your needs.
 
 
