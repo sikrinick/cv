@@ -50,8 +50,12 @@
 \setlength{\parindent}{0pt}
 % No page numbers
 \pagenumbering{gobble}
+
 % Page color
-\definecolor{backgroundcolor}{HTML}{FDF6E3}
+% {FDF6E3} <= previous, yellow bateman
+% {F5F5F5} <= off-white allen
+\definecolor{backgroundcolor}{HTML}{F5F5F5} 
+
 \pagecolor{backgroundcolor}
 
 %% Styles

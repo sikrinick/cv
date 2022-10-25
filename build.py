@@ -10,18 +10,15 @@ chdir(script_dir)
 
 class Target:
     
-    def __init__(self, input_file_name: str, output_dir: str, page_count: int) -> 'Target':
+    def __init__(self, input_file_name: str, output_dir: str) -> 'Target':
         self.input_file_name = input_file_name
         self.output_dir = output_dir
-        self.page_count = page_count
-
         self.target_name = Path(self.input_file_name).with_suffix("")
 
 
     def build(self):
         pdf = self.__build_pdf()
-        self.__build_svg(pdf)
-        
+        self.__build_svg(pdf)        
 
     def __build_pdf(self) -> Path:
         output_pdf_dir = self.output_dir / "pdf" / self.target_name
@@ -49,34 +46,22 @@ class Target:
 
         print("Converting PDF to SVG")
 
-        for i in range(1, self.page_count + 1):
-            if i == 1:
-                output_svg_name = self.target_name.with_suffix(".svg")
-            else:
-                output_svg_name = self.target_name.with_suffix(f".{i}.svg")
-
-            output_svg_file = output_svg_dir / output_svg_name
-
-            run([
-                "dvisvgm",
-                "--pdf",
-                f"--page={i}",
-                f"--output={output_svg_file}",
-                pdf_file
-            ])
-            print(f"SVG file is in {output_svg_file}")
-
+        output_svg_file = output_svg_dir / self.target_name.with_suffix(".%d.svg")
+        run([
+            "pdf2svg",
+            pdf_file,
+            output_svg_file,
+            "all"
+        ])
 
 output_dir = Path("output")
 resume_target = Target(
     input_file_name="resume.tex",
-    output_dir=output_dir,
-    page_count=1
+    output_dir=output_dir
 )
 cv_target = Target(
     input_file_name="cv.tex",
-    output_dir=output_dir,
-    page_count=2
+    output_dir=output_dir
 )
 resume_target.build()
 cv_target.build()

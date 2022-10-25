@@ -12,7 +12,7 @@ Please, don't hesitate to use it for your needs.
 <a href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/cv/cv.pdf">
 
 <img
-src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.svg" title="cv" 
+src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.1.svg" title="cv_1" 
 />
 </a>
 </td>
@@ -27,7 +27,26 @@ src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.svg" ti
 </table>
 
 ## Resume
-[![Resume](https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/resume.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume/resume.pdf)
+<table>
+<tr>
+<td valign="top">
+
+<a href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume/resume.pdf">
+
+<img
+src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/resume.1.svg" title="resume_1" 
+/>
+</a>
+</td>
+
+<td valign="top">
+<a href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume/resume.pdf">
+<img
+ src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/resume.2.svg" title="resume_2"
+ />
+</a>
+</td>
+</table>
 
 ## Quick Start
 - [**Check CV on OverLeaf.com**](https://www.overleaf.com/read/sthfkhvrccpx)
@@ -41,7 +60,11 @@ brew install --cask mactex
 ```
 - [Python 3](https://www.python.org/downloads/)  
 Required to run `build.py` script
-
+- [pdf2svg](https://cityinthesky.co.uk/opensource/pdf2svg/)  
+Required to run `build.py` script
+```
+brew install pdf2svg
+```
 ## Compilation
 ```zsh
 ./build.py
@@ -71,3 +94,4 @@ brew install aspell
 - [LaTeX](http://www.latex-project.org)
 - [Awesome CV](https://github.com/posquit0/Awesome-CV)
 - [cvmaker](https://cvmkr.com/) and especially its [Elegant](https://cvmkr.com/pl/Pages/samples?type=elegant) sample
+- [American Psycho — Business Card scene](https://www.youtube.com/watch?v=aZVkW9p-cCU&ab_channel=SCOTLUSHdotCOM) for the background color inspiration
