@@ -1,21 +1,10 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ms-cv}[2022/05/07 v2.0.1 MS CV]
 
-
-\providecommand{\isresume}{}
-\DeclareOption{resume}{
-    \renewcommand{\isresume}{true}
-}
-\DeclareOption{cv}{
-    \renewcommand{\isresume}{false}
-}
-
 % Inherit options of article
 \DeclareOption*{
   \PassOptionsToClass{\CurrentOption}{article}
 }
-
-\ExecuteOptions{resume}
 
 \ProcessOptions\relax
 
@@ -89,17 +78,13 @@
     
 }
 
-% \cvexperience{company}{position}{place}{dates}{resume_description}{cv_description}
-\newcommand{\cvexperience}[6]{
+% \cvexperience{company}{position}{place}{dates}{description}
+\newcommand{\cvexperience}[5]{
     \begin{flushleft}
     \begin{tabularx}{\textwidth}{X r}
         {\large#2} & {\large#3} \\
         {\large#1} & #4 \\
-        \ifthenelse{\equal{\isresume}{true}}{
-            #5 & \\
-        }{
-            #6 & \\
-        }    
+        #5 & \\
     \end{tabularx}
     \end{flushleft}
 }
