@@ -1,52 +1,10 @@
-# CV [![Example](https://img.shields.io/badge/example-pdf-green.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume.pdf)
+# CV [![Example](https://img.shields.io/badge/example-pdf-green.svg)](https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/cv.pdf)
 
-This is my CV and a LaTeX class, which can be used for CV and Resume production.  
-Please, don't hesitate to use it for your needs.
+CV template and a LaTeX class.
 
-
-## CV
-<table>
-<tr>
-<td valign="top">
-
-<a href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/cv/cv.pdf">
-
-<img
-src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.1.svg" title="cv_1" 
-/>
+<a href="https://github.com/sikrinick/cv/blob/master/output/pdf/cv_android/cv_android.pdf">
+<img src="https://github.com/sikrinick/cv/blob/master/output/svg/cv_android.1.svg"/>
 </a>
-</td>
-
-<td valign="top">
-<a href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/cv/cv.pdf">
-<img
- src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/cv.2.svg" title="cv_2"
- />
-</a>
-</td>
-</table>
-
-## Resume
-<table>
-<tr>
-<td valign="top">
-
-<a href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume/resume.pdf">
-
-<img
-src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/resume.1.svg" title="resume_1" 
-/>
-</a>
-</td>
-
-<td valign="top">
-<a href="https://raw.githubusercontent.com/sikrinick/cv/master/output/pdf/resume/resume.pdf">
-<img
- src="https://raw.githubusercontent.com/sikrinick/cv/master/output/svg/resume.2.svg" title="resume_2"
- />
-</a>
-</td>
-</table>
 
 ## Quick Start
 - [**Check CV on OverLeaf.com**](https://www.overleaf.com/read/sthfkhvrccpx)
@@ -71,8 +29,7 @@ brew install pdf2svg
 ```
 or
 ```zsh
-latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error "cv.tex"
-latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error "resume.tex"
+latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error "cv_android.tex"
 ```
 
 ## Editor

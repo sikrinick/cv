@@ -55,13 +55,8 @@ class Target:
         ])
 
 output_dir = Path("output")
-resume_target = Target(
-    input_file_name="resume.tex",
-    output_dir=output_dir
-)
 cv_target = Target(
-    input_file_name="cv.tex",
+    input_file_name="cv_android.tex",
     output_dir=output_dir
 )
-resume_target.build()
 cv_target.build()
